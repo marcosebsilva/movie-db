@@ -5,7 +5,8 @@ const nextConfig = {
     domains: ["image.tmdb.org"]
   },
   env: {
-    API_KEY: process.env.API_KEY
+    API_KEY: process.env.API_KEY,
+    BASE_POSTER_URL: "https://image.tmdb.org/t/p/original",
   }
 }
 
