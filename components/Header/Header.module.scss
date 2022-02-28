@@ -10,6 +10,7 @@
     flex-basis: 20vw;
   }
   .navWrapper {
+    text-align: center;
     a {
       color: $highlight-color;
       font-size: 1.3rem;
@@ -27,15 +28,16 @@
     text-align: end;
     .profilePictureWrapper {
       position: relative;
-      width: 80px;
+      width: 50px;
       border-radius: 50%;
       overflow: hidden;
-      border: 5px solid $highlight-color;
-      height: 80px;
+      border: 3px solid $highlight-color;
+      height: 50px;
       transition: 300ms;
       background-color: white;
       &:hover {
-        transform: scale(1.03);
+        transform: scale(1.1);
+        border-color: red;
       }
     }
   }
