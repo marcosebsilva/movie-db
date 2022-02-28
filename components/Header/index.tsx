@@ -3,29 +3,36 @@ import Image from 'next/image';
 import { headerLogo } from 'assets/images';
 import useLocalStorage from 'hooks/useLocalStorage';
 import defaultUser from 'utils/defaultUser';
+import style from './Header.module.scss';
 
 
 const Header: NextPage = () => {
   const [user] = useLocalStorage('movie-db_user', defaultUser);
   return(
-    <header>
-      <Image 
-        src={ headerLogo }
-        alt="The Movie DataBase logo"
-      />
-      <nav>
+    <header className={style.Wrapper}>
+      <a className={style.logoWrapper} href='#'>
+        <Image
+          layout='responsive'
+          src={ headerLogo }
+          alt="The Movie DataBase logo"
+        />
+      </a>
+      <nav className={style.navWrapper}>
         <a>Home</a>
         <a href='#movies'>Movies</a>
         <a href='#api'>API</a>
       </nav>
-      <button>
-        <Image
-          width={100}
-          height={100}
-          src={ user.picture }
-          alt="Your profile picture"
-        />
-      </button>
+      <section className={style.profileSection}>
+        <div className={style.profilePictureWrapper}>
+          <Image
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            src={ user.picture }
+            alt="Your profile picture"
+          />
+        </div>
+      </section>
     </header>
   );
 }
