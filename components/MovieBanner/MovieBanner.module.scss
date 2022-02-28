@@ -1,5 +1,8 @@
 .movieCard {
-  height: 70vh;
+  .posterContainer {
+    height: 70vh;
+    position: relative;
+  }
   h1 {
     font-weight: 300;
     position: absolute;
