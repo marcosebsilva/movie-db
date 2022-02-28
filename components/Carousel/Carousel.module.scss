@@ -30,19 +30,3 @@
     transform: scale(1);
   }
 }
-
-.movieCard {
-  height: 70vh;
-  h1 {
-    position: absolute;
-    bottom: 0.5rem;
-    left: 2rem;
-    color: white;
-    z-index: 1000;
-  }
-  .movieCardImage{
-    border-radius: 3px;
-    position: absolute;
-  }
-}
-

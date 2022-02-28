@@ -1,0 +1,15 @@
+.movieCard {
+  height: 70vh;
+  h1 {
+    font-weight: 300;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 2rem;
+    color: white;
+    z-index: 1000;
+  }
+  .movieCardImage{
+    border-radius: 5px;
+    position: absolute;
+  }
+}

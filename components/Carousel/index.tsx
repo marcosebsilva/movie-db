@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 import style from './Carousel.module.scss';
 import Image from 'next/image';
 import { MovieObject } from 'types';
+import MovieBanner from 'components/MovieBanner';
 
 
 const Carousel: NextPage<{trending: Array<MovieObject>}> = ({trending}) => {
@@ -32,28 +33,7 @@ const Carousel: NextPage<{trending: Array<MovieObject>}> = ({trending}) => {
   }
   return(
     <Slider {...settings} className={style.carousel}>
-      {trending.map((movie) => (
-        <article
-          className={style.movieCard}
-          key={movie.id}
-        >
-          <h1>{movie.title}</h1>
-          <div className={style.movieOverview}>
-            <p>{movie.overview}</p>
-          </div>
-          <div className={style.posterContainer}>
-            <Image
-              priority
-              className={style.movieCardImage}
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-              src={process.env.BASE_POSTER_URL + movie.backdrop_path}
-              alt={`${movie.title} high quality poster`}
-            />
-          </div>
-        </article>
-      ))}
+      {trending.map((movie) => <MovieBanner key={movie.id} movie={movie}/>)}
     </Slider>
   );
 }
