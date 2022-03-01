@@ -17,13 +17,13 @@ const Carousel: NextPage<{trending: Array<MovieObject>}> = ({trending}) => {
     arrows: false,
     centerMode: true,
     infinite: true,
-    centerPadding: "400px",
+    centerPadding: "200px",
     slidesToShow: 1,
     speed: 800,
     focusOnSelect: true,
     responsive: [
       {
-        breakpoint: 1280,
+        breakpoint: 1080,
         settings: {
           centerPadding: "100px"
         }
