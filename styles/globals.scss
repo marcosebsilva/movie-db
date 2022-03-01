@@ -4,8 +4,11 @@ body {
   background-color: black;
   font-size: 12px;
   font-family: 'Ubuntu', sans-serif;
+  color: white;
 }
-
+p {
+  white-space: pre-line;
+}
 * {
   box-sizing: border-box;
   text-decoration: none;

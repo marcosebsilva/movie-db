@@ -1,2 +1,4 @@
 $highlight-color: #01B4E4;
-$darker-highlight-color: #215f70;
+$light-green: #90CEA1;
+$darker-highlight-color: darken($highlight-color, 15);
+$page-padding: 0 5rem;
