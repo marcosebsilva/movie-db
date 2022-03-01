@@ -3,7 +3,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import style from './Carousel.module.scss';
-import Image from 'next/image';
 import { MovieObject } from 'types';
 import MovieBanner from 'components/MovieBanner';
 
