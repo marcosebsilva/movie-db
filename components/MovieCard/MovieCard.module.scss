@@ -1,0 +1,44 @@
+@import 'styles/mixins';
+.wrapper {
+  position: relative;
+  transition: 100ms;
+  &:hover {
+    transform: scale(1.04);
+    .title {
+      display: block;
+    }
+    .posterWrapper {
+      opacity: 0.4;
+    }
+  }
+}
+.title {
+  z-index: 1000;
+  display: none;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.posterWrapper {
+  position: relative;
+  transition: 100ms;
+  aspect-ratio: 2 / 3;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.highRated {
+  @include c-movie-rating;
+  background-color: green;
+}
+.mediumRated {
+  @include c-movie-rating;
+  background-color: rgb(173, 173, 50);
+}
+.lowRated {
+  @include c-movie-rating;
+  background-color: red;
+}
