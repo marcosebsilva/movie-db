@@ -18,6 +18,10 @@ git clone git@github.com:marcosebsilva/movie-db.git && cd movie-db
 ```
 npm install
 ```
+2. Criar um arquivo .env com sua chave de acesso pra API do TheMovieDB, que tu pode aprender a gerar [aqui.](https://developers.themoviedb.org/3/getting-started/introduction)
+```
+API_KEY=[sua_api_aqui]
+```
 
 3. Execute a aplicação
 ```
